@@ -5,7 +5,7 @@ import Article from "../models/article.model.js";
 // GET: /api/articles/:articleId
 export const loadArticle = async (req, res) => {
     const articleId = req.params.articleId;
-    if (!articleId) return res.status(404).json({ error: "Article not found" });
+    console.log(articleId);
 
     try {
         const article = await Article.findById(articleId);
@@ -61,7 +61,7 @@ export const updateArticle = async (req, res) => {
             title,
             lastModificationDate,
             content
-        });
+        }); console.log("@@@@@");
 
         res.status(200).json({ message: "Article successfully updated" });
     } catch (error) {

@@ -10,7 +10,6 @@ import {
 const router = Router();
 
 router.get("/articles/:articleId", loadArticle);
-
 router.get("/articles", loadArticles);
 
 router.post("/articles", createArticle);

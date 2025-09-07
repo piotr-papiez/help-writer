@@ -15,6 +15,8 @@ const CLIENT_URL = process.env.CLIENT_URL;
 // Init
 const app = express();
 
+app.set("trust proxy", 1);
+
 app.use(express.json());
 app.use(cors({ origin: CLIENT_URL }));
 
